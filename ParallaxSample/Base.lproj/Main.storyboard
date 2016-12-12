@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YHD-el-6Ig">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="nsD-VM-m3D">
+            <objects>
+                <tableViewController id="YHD-el-6Ig" customClass="TableViewController" customModule="ParallaxSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="188" sectionHeaderHeight="28" sectionFooterHeight="28" id="u1p-CY-tCp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="170" id="SaM-Po-Gd7" customClass="TableViewCell" customModule="ParallaxSample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="170"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SaM-Po-Gd7" id="Icx-TZ-w6l">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0I-Qv-FN2">
+                                            <rect key="frame" x="15" y="20" width="345" height="129"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo000" translatesAutoresizingMaskIntoConstraints="NO" id="fjF-Co-mgt">
+                                                    <rect key="frame" x="0.0" y="-100" width="345" height="229"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="fjF-Co-mgt" secondAttribute="trailing" id="cAA-ys-nJE"/>
+                                                <constraint firstAttribute="bottom" secondItem="fjF-Co-mgt" secondAttribute="bottom" constant="-50" id="seD-od-kcE"/>
+                                                <constraint firstItem="fjF-Co-mgt" firstAttribute="leading" secondItem="I0I-Qv-FN2" secondAttribute="leading" id="vzz-rV-yWD"/>
+                                                <constraint firstItem="fjF-Co-mgt" firstAttribute="top" secondItem="I0I-Qv-FN2" secondAttribute="top" constant="-50" id="zGg-u3-6w3"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="I0I-Qv-FN2" firstAttribute="centerX" secondItem="Icx-TZ-w6l" secondAttribute="centerX" id="0oZ-Nt-tpq"/>
+                                        <constraint firstItem="I0I-Qv-FN2" firstAttribute="centerY" secondItem="Icx-TZ-w6l" secondAttribute="centerY" id="1ba-sE-dex"/>
+                                        <constraint firstItem="I0I-Qv-FN2" firstAttribute="leading" secondItem="Icx-TZ-w6l" secondAttribute="leadingMargin" constant="7" id="R78-3G-B8J"/>
+                                        <constraint firstItem="I0I-Qv-FN2" firstAttribute="top" secondItem="Icx-TZ-w6l" secondAttribute="topMargin" constant="12" id="nYy-b6-aCn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="photoView" destination="fjF-Co-mgt" id="HwJ-be-tha"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YHD-el-6Ig" id="DSV-Z1-AEY"/>
+                            <outlet property="delegate" destination="YHD-el-6Ig" id="Ha3-Mm-f0M"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CbS-lZ-eeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-174" y="19"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo000" width="1024" height="583"/>
+    </resources>
+</document>
